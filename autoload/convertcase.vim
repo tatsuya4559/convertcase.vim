@@ -2,10 +2,10 @@ vim9script
 
 def DetermineCaseStyle(word: string): string
   # 大文字を含まない
-  if word ==# tolower(word) # word =~# '^[^A-Z]\+$'
+  if word ==# tolower(word)
     return 'snake'
   # 小文字を含まない
-  elseif word ==# toupper(word) # word =~# '^[^a-z]\+$'
+  elseif word ==# toupper(word)
     return 'upper'
   # 1文字目が小文字
   elseif word[0] =~# '[a-z]'
